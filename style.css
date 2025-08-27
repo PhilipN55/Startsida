@@ -1,0 +1,31 @@
+.header{
+    background-color: black;
+    color: white;
+    padding: 15px;
+    font-size: 3vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+    margin-right: 50px;
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    opacity: 0.5;
+}
+
+*{
+    box-sizing: border-box;
+    
+}
+
+.img1{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.övning{
+    position: absolute;
+}
