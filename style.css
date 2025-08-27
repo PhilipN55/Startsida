@@ -7,18 +7,32 @@
     justify-content: space-between;
 }
 
-a{
+body {
+    margin: 0;
+    overflow-y: hidden;
+}
+
+*{box-sizing: border-box;}
+
+.a1{
+    text-decoration: none;
+    color: white;
+}
+
+.a2{
     margin-right: 50px;
     text-decoration: none;
     color: white;
 }
+
 a:hover{
     opacity: 0.5;
 }
 
-*{
-    box-sizing: border-box;
-    
+
+
+.huvudsida{
+    display: flex;
 }
 
 .img1{
@@ -27,5 +41,13 @@ a:hover{
 }
 
 .övning{
+    background-color: black;
     position: absolute;
+    top: 30%;
+    left: 85%;
+    right: 0;
+    font-size: 3vh;
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
 }
