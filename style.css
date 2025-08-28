@@ -10,6 +10,7 @@
 body {
     margin: 0;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 *{box-sizing: border-box;}
@@ -40,8 +41,21 @@ a:hover{
     max-height: 100%;
 }
 
-.övning{
+#img2{
+    background-color: black;
+    position: absolute;
+    padding: 20px;
+    border-radius: 20px;
+    left: 20%;
+    top: 13%;
+    display: none;
+    
+}
+
+
+#show{
     background-color: rgb(25, 25, 25);
+    color: white;
     position: absolute;
     top: 30%;
     left: 85%;
