@@ -1,5 +1,5 @@
 .header{
-    background-color: black;
+    background-color: rgb(25, 25, 25);
     color: white;
     padding: 15px;
     font-size: 3vh;
@@ -41,7 +41,7 @@ a:hover{
 }
 
 .övning{
-    background-color: black;
+    background-color: rgb(25, 25, 25);
     position: absolute;
     top: 30%;
     left: 85%;
