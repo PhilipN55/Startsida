@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     SBtn.addEventListener("click", () => {
         if(bild.style.display === "none" || bild.style.display === "") {   // Om bilden är dold → visa den
-        bild.style.display = "block";
+        bild.style.display = "flex";
         SBtn.textContent = "X"; // ändra knapptext
   } 
         else {     // Om bilden visas → göm den
