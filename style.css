@@ -33,7 +33,6 @@ a:hover{
 }
 
 
-
 .huvudsida{
     display: flex;
     justify-content: center;
@@ -62,21 +61,22 @@ a:hover{
     position: absolute;
     width: 100%;
     display: flex;
-    flex-wrap: wrap;               
+    flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: center;
-
-    box-sizing: border-box;
+    justify-content: space-around;
 }
 
 .a3{
     background-color: black;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10%;
-    margin: 4%;
+    margin: 5%;
     text-decoration: none;
     color: white;
     font-weight: 500;
+    width: 150px;
+    text-align: center;
+    
 }
 
 #show{
@@ -91,4 +91,3 @@ a:hover{
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
 }
-
