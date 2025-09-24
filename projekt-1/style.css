@@ -1,0 +1,28 @@
+*{font-family: sans-serif; box-sizing: border-box;}
+body{
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-size: cover;
+}
+
+span{font-size: 15px;}
+
+.header{
+    display: flex;
+    justify-content: flex-start;
+    background-image: linear-gradient(to bottom,rgb(25, 25, 25),gray);
+}
+
+.vheader{
+    flex: 37%;
+}
+
+.mheader{
+    display: flex;
+    flex: 60%;
+}
+
+.mheader img{
+    width: 110px;
+}
