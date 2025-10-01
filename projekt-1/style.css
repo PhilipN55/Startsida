@@ -9,20 +9,13 @@ body{
 span{font-size: 15px;}
 
 .header{
-    display: flex;
-    justify-content: flex-start;
+    font-size: 10px;
     background-image: linear-gradient(to bottom,rgb(25, 25, 25),gray);
-}
-
-.vheader{
-    flex: 37%;
-}
-
-.mheader{
     display: flex;
-    flex: 60%;
+    justify-content: center;
 }
 
-.mheader img{
-    width: 110px;
+.header img{
+    width: 6%;
 }
+
