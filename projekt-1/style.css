@@ -9,8 +9,21 @@ body{
 span{font-size: 15px;}
 
 .header{
+<<<<<<< Updated upstream
     font-size: 10px;
     background-image: linear-gradient(to bottom,rgb(25, 25, 25),gray);
+=======
+    display: flex;
+    justify-content: flex-start;
+    background-image: linear-gradient(to bottom,rgb(25, 25, 25),rgb(116, 1, 1));
+}
+
+.vheader{
+    flex: 37%;
+}
+
+.mheader{
+>>>>>>> Stashed changes
     display: flex;
     justify-content: center;
 }
