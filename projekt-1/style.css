@@ -1,34 +1,89 @@
 *{font-family: sans-serif; box-sizing: border-box;}
+
 body{
     margin: 0;
-    overflow-y: hidden;
+    overflow-y: ;
     overflow-x: hidden;
-    background-size: cover;
+    background-size: 100% auto;
+    background-image: url(maxresdefault-1.webp);
+    background-repeat: no-repeat;
 }
 
 span{font-size: 15px;}
 
 .header{
-<<<<<<< Updated upstream
     font-size: 10px;
-    background-image: linear-gradient(to bottom,rgb(25, 25, 25),gray);
-=======
-    display: flex;
-    justify-content: flex-start;
-    background-image: linear-gradient(to bottom,rgb(25, 25, 25),rgb(116, 1, 1));
-}
-
-.vheader{
-    flex: 37%;
-}
-
-.mheader{
->>>>>>> Stashed changes
+    background-image: linear-gradient(to bottom,rgb(59, 59, 59),rgb(83, 51, 51));
     display: flex;
     justify-content: center;
+    color: rgb(255, 248, 234);
 }
 
-.header img{
-    width: 6%;
+.header img{width: 5%;}
+
+.slides{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 80px;
 }
 
+.pics{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    border-radius: 30px;
+    width: fit-content;
+    padding: 10px;
+    max-width: 35%;
+
+}
+.pics img{
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.left{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgb(80, 80, 80);
+    opacity:  50%;
+}
+
+.right{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgb(80, 80, 80);
+    opacity: 50%;
+}
+
+
+.info{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+    color: white;
+}
+
+.box{
+    background-color: rgb(15, 11, 36);
+    border-radius: 40px;
+    padding: 20px;
+    width: 25%;
+    height: 400px;
+}
+
+.box span{
+    margin: 0;
+    line-height: 2.5;
+    font-weight: 700;
+    margin-right: 60px;
+}
+
+.p1{
+    margin-right: 12px;
+    line-height: 1.5;
+}
