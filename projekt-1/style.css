@@ -31,9 +31,10 @@ span{font-size: 15px;}
 
 
 .Scptoday{
-    color: white;
+    color: rgb(255, 248, 234);
     flex: 1;
     text-align: center;
+    font-size: 14px;
 }
 
 .links{
@@ -85,6 +86,27 @@ span{font-size: 15px;}
     transition: all 0.6s ease;
 
 }
+
+#slide3{
+    position: absolute;
+    transform: translateX(240%);
+}
+
+#slide3.out32{ 
+    transform: translateX(260%);
+    transition: all 0.6s ease;
+}
+
+#slide3.out31{
+    transform: translateX(240%);
+    transition: all 0.6s ease;
+}
+
+#slide3.in3{
+    transform: translateX(0);
+    transition: all 0.6s ease;
+}
+
 
 .pics{
     display: flex;
@@ -156,14 +178,12 @@ button{
     margin-right: 60px;
 }
 
-.p1{ 
-    position: absolute;
-    visibility: hidden;
+#p1, #t1{ 
+    display: block;
     line-height: 1.9;
 }
 
-.p2{
-    position: absolute;
-    
+#p2, #t2{
+    display: none;
 }
 
