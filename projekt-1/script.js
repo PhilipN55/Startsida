@@ -1,6 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
     const   bild1 = document.getElementById("slide1");
     const   bild2 = document.getElementById("slide2");
+    const
     const   p1 = document.getElementById("p1")
     const   p2 = document.getElementById("p2")
     const   t1 = document.getElementById("t1")
@@ -10,6 +11,19 @@ window.addEventListener("DOMContentLoaded", () => {
     const   Vbtn = document.getElementById("leftB");
 
 
+    Vbtn.addEventListener("click", () => {
+    if(bild1.classList.contains("in1") || bild1.classList.length === 0) {
+    bild1.classList.remove("in1")
+    bild1.classList.add("out1");
+    bild2.classList.remove("out2")
+    bild2.classList.add("in2");
+    p1.style.display = "none";
+    p2.style.display = "block";
+    t1.style.display = "none";
+    t2.style.display = "block";
+    h1.textContent = "SCP-914";
+    } 
+    });
 
     RBtn.addEventListener("click", () => {
         if(bild1.classList.contains("in1") || bild1.classList.length === 0) {
