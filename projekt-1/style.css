@@ -72,13 +72,21 @@ span{font-size: 15px;}
     transition: all 0.6s ease;
 }
 
+#slide1.out11{
+    transform: translateX(-240%);
+    transition: all 0.6s ease;
+}
 
 #slide2{transform: translateX(-240%);}
 
 #slide2.out2{
     transform: translateX(-240%);
     transition: all 0.6s ease;
+}
 
+#slide2.out22{
+    transform: translateX(-260%);
+    transition: all 0.3s ease;
 }
 
 #slide2.in2{
@@ -93,8 +101,8 @@ span{font-size: 15px;}
 }
 
 #slide3.out32{ 
-    transform: translateX(260%);
-    transition: all 0.6s ease;
+    transform: translateX(270%);
+    transition: all 0.3s ease;
 }
 
 #slide3.out31{
@@ -187,3 +195,6 @@ button{
     display: none;
 }
 
+#p3, #t3{
+    display: none;
+}
