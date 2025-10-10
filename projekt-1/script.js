@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const   Vbtn = document.getElementById("leftB");
 
 
-    Vbtn.addEventListener("click", () => {
+    RBtn.addEventListener("click", () => {
         if(bild1.classList.contains("in1") || bild1.classList.length === 0) {
         bild1.classList.add("out11");
         bild3.classList.remove("out31")
@@ -31,7 +31,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 
-    RBtn.addEventListener("click", () => {
+    Vbtn.addEventListener("click", () => {
         if(bild3.classList.contains("in3") || bild3.classList.length === 0) {
             bild3.classList.remove("in3")
             bild3.classList.add("out31")
@@ -64,7 +64,7 @@ window.addEventListener("DOMContentLoaded", () => {
         }});
 
 
-    Vbtn.addEventListener("click", () => {
+    RBtn.addEventListener("click", () => {
         if(bild2.classList.contains("in2") || bild2.classList.length === 0) {
         bild2.classList.remove("in2")
         bild2.classList.add("out2");
