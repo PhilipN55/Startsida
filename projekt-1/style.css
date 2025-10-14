@@ -162,6 +162,10 @@ button{
     font-size: 50px;
 }
 
+#leftB, #rightB{
+    padding: 40px;
+}
+
 .left:hover, .right:hover{
     opacity: 0.7;
 }
