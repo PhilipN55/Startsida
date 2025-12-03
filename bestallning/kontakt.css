@@ -1,0 +1,101 @@
+/* Grundlayout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+/* Sticky header som används på alla sidor */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: #f9e9a9;
+  padding: 20px 0;
+  border-bottom: 2px solid #e4d089;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #a66b00;
+  text-decoration: none;
+}
+
+.nav {
+  margin-top: 10px;
+}
+
+.nav a {
+  margin-right: 25px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  color: #a66b00;
+}
+
+.page-content {
+  padding-top: 30px;
+}
+
+/* Formulär – fasta mått */
+.kontakt-form {
+  margin-top: 30px;
+  width: 600px;
+}
+
+.kontakt-form label {
+  font-weight: 600;
+}
+
+.kontakt-form input,
+.kontakt-form textarea {
+  width: 600px;
+  padding: 10px;
+  margin: 8px 0 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.kontakt-form textarea {
+  height: 120px;
+}
+
+/* Knapp */
+.btn {
+  background: #a66b00;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background: #8b5b00;
+}
+
+/* Kontaktinformation */
+.kontakt-info {
+  margin-top: 40px;
+}
+
+.kontakt-info a {
+  color: #a66b00;
+  text-decoration: none;
+}
+
+.kontakt-info a:hover {
+  text-decoration: underline;
+}
