@@ -3,13 +3,18 @@ body {
     margin: 0;
     overflow-y: hidden;
     overflow-x: hidden;
-    background-image: url(porse.jpg);
+    /*background-image: url(porse.jpg);*/
+    background-color: rgb(240, 240, 240);
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-
-*{box-sizing: border-box;}
+#knappar{display: none;}
+*{box-sizing: border-box; font-family: sans-serif;}
 
 .header{
+    flex-shrink: 0;
     background-color: rgb(25, 25, 25);
     color: white;
     padding: 15px;
@@ -19,12 +24,6 @@ body {
 }
 
 .a1{
-    text-decoration: none;
-    color: white;
-}
-
-.a2{
-    margin-right: 50px;
     text-decoration: none;
     color: white;
 }
@@ -44,8 +43,6 @@ a:hover{
     max-height: 100%;
     display: none;
 }
-
-
 
 #img2 {
     margin-top: 1%;
@@ -67,36 +64,62 @@ a:hover{
     justify-content: space-between;
 }
 
-.a3{
-    background-color: rgb(25, 25, 25);
-    border-style: solid;
-    border-color: rgb(199, 121, 44); 
-    border-radius: 10%;
-    margin: 5%;
-    text-decoration: none;
-    color: white;
-    font-weight: 550;
-    font-size: 2vh;
-    width: 150px;
-    padding: 3vh;
-    text-align: center;
-    
-    
-}
-
-#show{
-    background-color: rgb(25, 25, 25);
-    color: white;
-    position: absolute;
-    top: 30%;
-    left: 85%;
-    right: 0;
-    font-size: 3vh;
-    padding: 10px;
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
-}
-
 button:hover {
     cursor: pointer;
+}
+
+button{
+    background: none;
+    text-decoration: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+
+.a2{
+    text-decoration: none;
+    color: black;
+    display: none;
+    justify-content: center;
+    font-size: x-large;
+}
+.a3{
+    text-decoration: none;
+    color: black;
+    display: none;
+    justify-content: center;
+}
+
+#Projekt,#Övningar,.a2,.a3{
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 5px 5px rgba(50, 50, 50, 0.4);
+    border-radius: 20px;
+    padding: 30px;
+    flex: 1;
+    max-width: 200px;
+}
+
+#Tillbaka{
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 5px 5px rgba(50, 50, 50, 0.4);
+    border-radius: 20px;
+    padding: 15px;
+    flex: 1;
+    max-width: 200px;
+    visibility: hidden;
+}
+
+.huvudsida1{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex: 1;
+    gap: 15vh;
+    margin-top: 50px;
+}
+.huvudsida2{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 1;
 }
