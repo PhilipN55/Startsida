@@ -1,0 +1,26 @@
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    border: 2px solid black;
+    padding: 15px;
+}
+td,th{
+    border: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+tr:nth-of-type(4) td:nth-of-type(3){
+    background-color: grey;
+}
+tr:nth-of-type(3) td:nth-of-type(3){
+    background-color: pink;
+}
+tr:nth-of-type(2) td:nth-of-type(3){
+    background-color: blue;
+}
