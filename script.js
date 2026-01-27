@@ -2,7 +2,7 @@
 window.addEventListener("DOMContentLoaded", () => {
     const   T = document.getElementById("Tillbaka"); 
     const   PK = document.getElementById("Projekt");
-    const   OK = document.getElementById("Övningar");
+    const   OK = document.getElementById("Ovningar");
     const   P = document.querySelectorAll(".a2");
     const   O = document.querySelectorAll(".a3");
 
