@@ -1,0 +1,30 @@
+@font-face {
+    font-family: sigmarizz;
+    src: url(Super\ Meatball.ttf);
+}
+
+p{
+    font-size: 20vh;
+    font-weight: 400;
+    font-family: sigmarizz;
+    background: linear-gradient(to right, red,red,yellow,red,yellow,red);
+    background-clip: text;
+    color: transparent;
+    background-size: 200%;
+    animation: animation 3s linear infinite;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes animation {
+    0%{
+        background-position: 200% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
