@@ -1,0 +1,11 @@
+
+body{background-color: black;margin: 0;}
+
+.header{
+    position: fixed;
+    top: 0;
+    background-color: white;
+    height: 10vh;
+    width: 100%;
+    display: block;
+}
