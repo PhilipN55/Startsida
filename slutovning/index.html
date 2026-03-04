@@ -10,13 +10,13 @@
 <body>
     <div class="header">
         <div class="Husaberg">
-            <p style="font-size: 4vh;">Husaberg</p>    
+            <p class="Husaberg-text">HUSABERG</p>    
         </div>
     </div>
     <div class="info1">
         <div class="text1">
             <p style="font-size: 4vh;">BE125</p>
-            <p style="font-size: 2vh;">starting at 50k</p>
+            <p style="font-size: 2vh;">börjar vid 50.000</p>
         </div>
         <div class="bild1">
             <img src="image.png" width="400" height="300" alt="">
@@ -64,7 +64,58 @@
             </div>
         </div>
     </div>
-    <div class="placeholder2"></div>
+
+    <div class="info3">
+        <button class="prev" onclick="prevSlide()">&lt;</button>
+        <div class="info3-cards">
+            <div class="info3-card">
+                <div class="info3-card-left"></div>
+                <div class="info3-card-right"></div>
+            </div>
+            <div class="info3-card">
+                <div class="info3-card-left"></div>
+                <div class="info3-card-right"></div>
+            </div>
+            <div class="info3-card">
+                <div class="info3-card-left"></div>
+                <div class="info3-card-right"></div>
+            </div>
+        </div>
+        <button class="next" onclick="nextSlide()">></button>
+    </div>
+    <script>
+        let index = 1; // Tracks current slide position
+        const slides = document.querySelector('.info3-cards'); // Gets the slides container
+        const cards = document.querySelectorAll('.info3-card'); // Gets all individual cards
+        const totalSlides = cards.length; // Stores total number of slides
+
+        // Get dynamic width + gap of the first card
+        function getCardOffset() {
+        const style = getComputedStyle(cards[0]); // Gets computed styles of first card
+        const width = cards[0].offsetWidth; // Gets card width
+        const marginRight = parseInt(style.marginRight); // Gets right margin value
+        return width + marginRight * 2; // Returns total space per card including margins
+        }
+
+        function updateSlide() {
+        const offset = getCardOffset(); // Calculates card offset
+        slides.style.transform = `translateX(${(1 - index) * offset}px)`; // Translates slides based on index. ${ } same as calc
+        }
+
+        function nextSlide() {
+        if (index < totalSlides - 1) { // Checks if not at last slide
+            index++; // Increments index
+            updateSlide(); // Updates slide position
+        }
+        }
+
+        function prevSlide() {
+        if (index > 0) { // Checks if not at first slide
+            index--; // Decrements index
+            updateSlide(); // Updates slide position
+        }
+        }
+    </script>
 
 </body>
 </html>
