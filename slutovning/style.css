@@ -123,7 +123,8 @@ p{color: white;}
 
 .info3{
     height: 80vh;
-    background-color: black;
+    background-color: #3A3A3A;
+    box-shadow:inset 0 2px 5px rgba(255,255,255,0.08);
     display: flex;
     align-items: center;
     position: relative;
@@ -136,25 +137,49 @@ p{color: white;}
     width: 100%;
     transition: transform 0.4s ease;
     display: flex;
-
+    justify-content: center;
+    gap: 400px;
 }
 
 .info3-card{
-    background-color: rgb(33, 33, 33);
+    background-color: rgb(40, 40, 40);
     border-radius: 20px;
     height: 100%;
     width: 60vh;
-    margin: 0 60px;
+    margin: 0;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow:inset 0 2px 5px rgba(255,255,255,0.08);
+}
+
+.info3-card-left{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.info3-card-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 
-.prev { left: calc(50% - 30vh); }
-.next { right: calc(50% - 30vh); }
+
+.prev { left: calc(50% - 40vh); }
+.next { right: calc(50% - 40vh);}
 
 .info3 button {
     position: absolute;
     top: 50%;
     background: rgb(99, 99, 99);
+    background-size: 200px;
+    border-radius: 50%;
     color: white;
     border: none;
     padding: 10px;
