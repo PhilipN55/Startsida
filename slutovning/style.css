@@ -169,19 +169,27 @@ p{color: white;}
 
 
 
-.prev { transform: translateX(clamp(-340px,-40vw,-203px));}
-.next { transform: translateX(clamp(175px,40vw,340px));}
+.prev { transform: translateX(clamp(0,-40vw,0));}
+.next { transform: translateX(clamp(0,40vw,0));}
 
 .info3 button {
+    transform-origin: center;
     position: absolute;
     top: 50%;
     left: 50%;
-    background: rgb(99, 99, 99);
+    background: rgb(40, 40, 40);
+    box-shadow:inset 0 2px 5px rgba(255,255,255,0.08);
     background-size: 200px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     color: white;
     border: none;
-    padding: 10px;
     cursor: pointer;
     z-index: 100;
+}
+@media (max-width: 500px){
+    .info3 {flex-direction: column;}
+    .info3 button{position: relative;}
+
 }
