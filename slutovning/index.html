@@ -66,7 +66,7 @@
     </div>
 
     <div class="info3">
-        <button class="prev" onclick="prevSlide()">&lt;</button>
+        
         <div class="info3-cards">
             <div class="info3-card">
                 <div class="info3-card-left"><p>The Chain</p><br><p>Designed for strength, durability, and smooth performance. This high-quality chain ensures efficient power transfer and long-lasting reliability for every ride.</p></div>
@@ -81,7 +81,10 @@
                 <div class="info3-card-right"><img src="Suspension.png" alt=""></div>
             </div>
         </div>
-        <button class="next" onclick="nextSlide()">></button>
+        <div class="buttons">
+            <button class="next" onclick="nextSlide()">></button>
+            <button class="prev" onclick="prevSlide()">&lt;</button>
+        </div>
     </div>
     <script>
         let index = 1; // Tracks current slide position

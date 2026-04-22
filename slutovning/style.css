@@ -167,7 +167,10 @@ p{color: white;}
   border-bottom-right-radius: 20px;
 }
 
-
+.buttons {
+    display: flex;
+    flex-direction: row-reverse;
+}
 
 .prev { left: 400px; }
 .next { right: 400px; }
@@ -194,7 +197,8 @@ p{color: white;}
 }
 
 @media (max-width: 600px){
+    .prev { left: 100px; }
+    .next { right: -100px; }
     .info3 {flex-direction: column;}
     .info3 button{position: relative;}
-
 }
