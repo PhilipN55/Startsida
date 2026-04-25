@@ -20,8 +20,11 @@ p{color: white;}
 .Husaberg-text{
     font-size: 26px;
     font-family: serif;
-    
+    text-decoration: none;
+    color: white;
+    z-index: 1;
 }
+
 .info1 p{
     margin: 0;
 }
@@ -47,6 +50,7 @@ p{color: white;}
 
 .placeholder{
     min-height: 95vh;
+    z-index: -2;
 }
 .info2{
     min-height: 100dvh;
@@ -201,4 +205,5 @@ p{color: white;}
     .next { right: -100px; }
     .info3 {flex-direction: column;}
     .info3 button{position: relative;}
+    .info3-card{margin-top: 20vw;}
 }
