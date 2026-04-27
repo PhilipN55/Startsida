@@ -9,18 +9,29 @@ p{color: white;}
     min-height: 10vh;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    z-index: 1;
 }
 .menu-icon {
-  font-size: 30px;
-  cursor: pointer;
-  padding: 10px;
-  color: black;
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    padding: 0;
+    margin-right: 30px;
 }
 
+.menu-text{
+    font-size: 24px;
+    margin-right: 30px;
+}
 .Husaberg{
     color: rgb(229, 231, 235);
+    position: absolute;
+    transform: translateX(50%);
+    right: 50%;
 }
 .Husaberg-text{
     font-size: 26px;
@@ -42,6 +53,7 @@ p{color: white;}
     left: 50%;
     transform: translateX(-50%);
     margin-top: 15vh;
+    z-index: 1;
 }
 
 .text1{
@@ -53,7 +65,6 @@ p{color: white;}
 
 .placeholder{
     min-height: 95vh;
-
     pointer-events: none;
 }
 .info2{
@@ -65,6 +76,8 @@ p{color: white;}
     border-top-right-radius: 30px;
     display: flex;
     justify-content: center;
+    z-index: 2;
+    position: relative;
 }
 
 
@@ -133,6 +146,7 @@ p{color: white;}
     align-items: center;
     position: relative;
     overflow: hidden;
+    z-index: 2;
 }
 
 
@@ -202,6 +216,11 @@ p{color: white;}
 @media (max-width: 1450px){
     .prev { left: 70px; }
     .next { right: 70px; }
+}
+
+@media (max-width: 650px){
+    .menu-icon {display: flex;}
+    .menu-text {display: none;}
 }
 
 @media (max-width: 600px){
