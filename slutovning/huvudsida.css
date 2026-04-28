@@ -6,19 +6,71 @@ a{text-decoration: none; color: white;}
 .header{
     top: 0;
     background-color: rgba(25, 25, 25, 0.8);
-    min-height: 10vh;
+    height: 8vh;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    position: relative
+}
+.Husaberg{
+    color: rgb(229, 231, 235);
+    position: absolute;
+    transform: translateX(50%);
+    right: 50%;
+}
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    padding: 0;
+    margin-right: 30px;
+}
+
+.menu-text{
+    font-size: 24px;
+    margin: 0;
+    height: 100%;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+.menu-text p{ margin: 0px;    }
+.menu-text:hover{
+    background-color: rgba(25, 25, 25,0.6);
+    cursor: default;
 }
 .Husaberg-text{
-    
     font-size: 26px;
     font-family: serif;
     text-decoration: none;
     color: white;
     z-index: 1;
+
+}
+.dropdown {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: 150px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    text-align: center;
+
+}
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 .featuredBike{
     display: flex;
@@ -42,4 +94,9 @@ a{text-decoration: none; color: white;}
 }
 .readMore:hover{
     opacity: 0.8;
+}
+
+@media (max-width: 650px){
+    .menu-icon {display: flex;}
+    .menu-text {display: none;}
 }
