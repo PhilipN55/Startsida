@@ -13,32 +13,6 @@ p{color: white;}
     align-items: center;
     z-index: 1;
 }
-.menu-icon {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    padding: 10px;
-    color: rgb(255, 255, 255);
-    padding: 0;
-    margin-right: 30px;
-}
-
-.menu-text{
-    font-size: 24px;
-    margin: 0;
-    height: 100%;
-    width: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-}
-.menu-text p{ margin: 0px;    }
-.menu-text:hover{
-    background-color: rgba(25, 25, 25,0.6);
-    cursor: default;
-}
 
 .Husaberg{
     color: rgb(229, 231, 235);

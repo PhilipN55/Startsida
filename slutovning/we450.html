@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Övning</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="Husaberg">
+            <a href="huvudsida.html" class="Husaberg-text">HUSABERG</a>
+        </div>
+    </div>
+    <div class="info1">
+        <div class="text1">
+            <p style="font-size: 35px;">WE450</p>
+            <p style="font-size: 18px;">starts at 80.000</p>
+        </div>
+        <div class="bild1">
+            <img src="image.png" width="400" height="300" alt="">
+        </div>
+    </div>
+
+    <div class="placeholder"></div>
+    <div class="info2">
+        <div class="info2-cards">
+            <div class="card1">
+                <p class="card-header">67</p>
+                <p class="header-name">HK</p>
+                <div class="divider"></div>
+                <p class="card-name">Effekt</p>
+            </div>
+            <div class="card2">
+                <p class="card-header">96</p>
+                <p class="header-name">KG</p>
+                <div class="divider"></div>
+                <p class="card-name">Vikt</p>
+            </div>
+            <div class="card3">
+                <p class="card-header">1350</p>
+                <p class="header-name">NM</p>
+                <div class="divider"></div>
+                <p class="card-name">Vridmoment</p>
+            </div>
+            <div class="card4">
+                <p class="card-header">18</p>
+                <p class="header-name">L</p>
+                <div class="divider"></div>
+                <p class="card-name">Tank</p>
+            </div>
+            <div class="card5">
+                <p class="card-header">3</p>
+                <p class="header-name">Year</p>
+                <div class="divider"></div>
+                <p class="card-name">Warranty</p>
+            </div>
+            <div class="card6">
+                <p class="card-header">450</p>
+                <p class="header-name">CC</p>
+                <div class="divider"></div>
+                <p class="card-name">Engine</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="info3">
+        
+        <div class="info3-cards">
+            <div class="info3-card">
+                <div class="info3-card-left"><p>The Chain</p><br><p>Designed for strength, durability, and smooth performance. This high-quality chain ensures efficient power transfer and long-lasting reliability for every ride.</p></div>
+                <div class="info3-card-right"><img src="chain.png" alt=""></div>
+            </div>
+            <div class="info3-card">
+                <div class="info3-card-left"><p>The Handlebar</p><br><p>Designed for control, durability, and rider comfort. This high-quality handlebar provides a stable grip and responsive handling, ensuring better control and confidence on every ride.</p></div>
+                <div class="info3-card-right"><img src="Handlebar.png" alt=""></div>
+            </div>
+            <div class="info3-card">
+                <div class="info3-card-left"><p>The Suspension</p><br><p>Engineered for strength, stability, and smooth performance. This advanced suspension absorbs impact and rough terrain with ease, delivering improved control and a more comfortable ride.</p></div>
+                <div class="info3-card-right"><img src="Suspension.png" alt=""></div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="next" onclick="nextSlide()">></button>
+            <button class="prev" onclick="prevSlide()">&lt;</button>
+        </div>
+    </div>
+    <script>
+        let index = 1; // Tracks current slide position
+        const slides = document.querySelector('.info3-cards'); // Gets the slides container
+        const cards = document.querySelectorAll('.info3-card'); // Gets all individual cards
+        const totalSlides = cards.length; // Stores total number of slides
+
+        // Get dynamic width + gap of the first card
+        function getCardOffset() {
+            const style = getComputedStyle(cards[0]);
+            const width = cards[0].offsetWidth;
+            const gap = parseInt(getComputedStyle(slides).gap) || 0;
+            return width + gap; // total space per card
+        }
+
+        function updateSlide() {
+        const offset = getCardOffset(); // Calculates card offset
+        slides.style.transform = `translateX(${(1 - index) * offset}px)`; // Translates slides based on index. ${ } same as calc
+        }
+
+        function nextSlide() {
+        if (index < totalSlides - 1) { // Checks if not at last slide
+            index++; // Increments index
+            updateSlide(); // Updates slide position
+        }
+        }
+
+        function prevSlide() {
+        if (index > 0) { // Checks if not at first slide
+            index--; // Decrements index
+            updateSlide(); // Updates slide position
+        }
+        }
+    </script>
+
+</body>
+</html>
