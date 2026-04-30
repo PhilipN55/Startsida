@@ -9,7 +9,7 @@
 <body>
     <div class="header">        
         <div class="Husaberg">
-            <p class="Husaberg-text">HUSABERG</p>
+            <a class="Husaberg-text" href="huvudsida.html">Husaberg</a>
         </div>
     </div>
 
@@ -51,11 +51,19 @@
                 <span class="custom-checkbox"></span>
             </label>
         </div>
+
         <div class="right">
             <div class="bikeName"><h2 id="bikeName"></h2></div>
             <div class="price">
                 <p>Base price: <span id="basePrice"></span>Kr</p>
                 <h3>Total: <span id="totalPrice"></span>Kr</h3>
+            </div>
+            <h3>contact information</h3>
+            <div class="order">
+                <input type="text" class="input" placeholder="Full name">
+                <input type="email" class="input" placeholder="Email address">
+                <input type="text" class="input" placeholder="Home address">
+                <button class="send">Send Order</button>
             </div>
         </div>
     </div>
@@ -71,26 +79,41 @@ document.getElementById("basePrice").textContent = basePrice;
 const totalPrice = document.getElementById("totalPrice");
 
 function updatePrice() {
-    let total = basePrice;
+        let total = basePrice;
 
+        document.querySelectorAll("input[type='checkbox']").forEach(box => {
+            if (box.checked) {
+                total += parseInt(box.dataset.price);
+            }
+        });
+
+        totalPrice.textContent = total;
+    }
+
+    updatePrice();
+
+    // listen for changes
     document.querySelectorAll("input[type='checkbox']").forEach(box => {
-        if (box.checked) {
-            total += parseInt(box.dataset.price);
-        }
+        box.addEventListener("change", updatePrice);
     });
-
-    totalPrice.textContent = total;
-}
-
-// run once on load
-updatePrice();
-
-// listen for changes
-document.querySelectorAll("input[type='checkbox']").forEach(box => {
-    box.addEventListener("change", updatePrice);
-});
 </script>
 
+<script>
+    const sendBtn = document.querySelector(".send");
+    const rightPanel = document.querySelector(".right");
+    const inputs = document.querySelectorAll(".input");
+
+    sendBtn.addEventListener("click", () => {
+        // slide out
+        rightPanel.classList.add("slide-out");
+
+        // reset after animation
+        setTimeout(() => {
+            inputs.forEach(input => input.value = "");
+            rightPanel.classList.remove("slide-out");
+        }, 1000); // match CSS transition time
+    });
+</script>
 
 </body>
 </html>
