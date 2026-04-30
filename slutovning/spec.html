@@ -15,15 +15,82 @@
 
     <div class="sides">
         <div class="left">
-            <div class="specs"></div>
-            <div class="specs"></div>
-            <div class="specs"></div>
-            <div class="specs"></div>
-            <div class="specs"></div>
-            <div class="specs"></div>
+            <label class="specs">
+                <input type="checkbox" data-price="2400">
+                <p>Graphics Kit +2400kr</p>
+                <span class="custom-checkbox"></span>
+            </label>
+
+            <label class="specs">
+                <input type="checkbox" data-price="5000">
+                <p>FMF exhaust +5000kr</p>
+                <span class="custom-checkbox"></span>
+            </label>
+
+            <label class="specs">
+                <input type="checkbox" data-price="1500">
+                <p>Street tires +1500kr</p>
+                <span class="custom-checkbox"></span>
+            </label>
+
+            <label class="specs">
+                <input type="checkbox" data-price="1800">
+                <p>Cleaning kit +1800kr</p>
+                <span class="custom-checkbox"></span>
+            </label>
+
+            <label class="specs">
+                <input type="checkbox" data-price="900">
+                <p>Extra plastics +900kr</p>
+                <span class="custom-checkbox"></span>
+            </label>
+
+            <label class="specs">
+                <input type="checkbox" data-price="1200">
+                <p>Service kit +1200kr</p>
+                <span class="custom-checkbox"></span>
+            </label>
         </div>
-        <div class="right"></div>
+        <div class="right">
+            <div class="bikeName"><h2 id="bikeName"></h2></div>
+            <div class="price">
+                <p>Base price: <span id="basePrice"></span>Kr</p>
+                <h3>Total: <span id="totalPrice"></span>Kr</h3>
+            </div>
+        </div>
     </div>
+
+
+<script>
+const bikeName = localStorage.getItem("bikeName");
+const basePrice = parseInt(localStorage.getItem("basePrice")) || 0;
+
+document.getElementById("bikeName").textContent = bikeName;
+document.getElementById("basePrice").textContent = basePrice;
+
+const totalPrice = document.getElementById("totalPrice");
+
+function updatePrice() {
+    let total = basePrice;
+
+    document.querySelectorAll("input[type='checkbox']").forEach(box => {
+        if (box.checked) {
+            total += parseInt(box.dataset.price);
+        }
+    });
+
+    totalPrice.textContent = total;
+}
+
+// run once on load
+updatePrice();
+
+// listen for changes
+document.querySelectorAll("input[type='checkbox']").forEach(box => {
+    box.addEventListener("change", updatePrice);
+});
+</script>
+
 
 </body>
 </html>
