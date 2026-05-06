@@ -9,12 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button onclick="goToSpec('Husaberg BE 125', 50000)">Spec Now</button>
+    <button class="specNow" onclick="goToSpec('Husaberg BE 125', 50000)">Spec Now</button>
     <script>
-    function goToSpec(name, price) {
-        localStorage.setItem("bikeName", name);
-        localStorage.setItem("basePrice", price);
-        window.location.href = "spec.html";}
+        function goToSpec(name, price) {
+            localStorage.setItem("bikeName", name);
+            localStorage.setItem("basePrice", price);
+            window.location.href = "spec.html";}
     </script>
 
 
@@ -95,39 +95,39 @@
             <button class="prev" onclick="prevSlide()">&lt;</button>
         </div>
     </div>
-    <script>
-        let index = 1; // Tracks current slide position
-        const slides = document.querySelector('.info3-cards'); // Gets the slides container
-        const cards = document.querySelectorAll('.info3-card'); // Gets all individual cards
-        const totalSlides = cards.length; // Stores total number of slides
+<script>
+    let index = 1; // Start slide
+    const slides = document.querySelector('.info3-cards'); // Hämtar hela slide-raden
+    const cards = document.querySelectorAll('.info3-card'); // Hämtar alla kort
+    const totalSlides = cards.length; // Antal slides totalt
 
-        // Get dynamic width + gap of the first card
-        function getCardOffset() {
-            const style = getComputedStyle(cards[0]);
-            const width = cards[0].offsetWidth;
-            const gap = parseInt(getComputedStyle(slides).gap) || 0;
-            return width + gap; // total space per card
-        }
+    // Räknar ut bredd + mellanrum för ett kort
+    function getCardOffset() {
+        const width = cards[0].offsetWidth; // Kortets bredd
+        const gap = parseInt(getComputedStyle(slides).gap) || 0; // gap mellan kort
+        return width + gap; // Total bredd per kort
+    }
 
-        function updateSlide() {
-        const offset = getCardOffset(); // Calculates card offset
-        slides.style.transform = `translateX(${(1 - index) * offset}px)`; // Translates slides based on index. ${ } same as calc
-        }
+    function updateSlide() {
+        const offset = getCardOffset(); // Hämtar avstånd
+        // Flyttar slides åt sidan beroende på index
+        slides.style.transform = `translateX(${(1 - index) * offset}px)`;
+    }
 
-        function nextSlide() {
-        if (index < totalSlides - 1) { // Checks if not at last slide
-            index++; // Increments index
-            updateSlide(); // Updates slide position
+    function nextSlide() {
+        if (index < totalSlides - 1) { // Om inte sista slide
+            index++; // Gå fram
+            updateSlide(); // Uppdatera position
         }
-        }
+    }
 
-        function prevSlide() {
-        if (index > 0) { // Checks if not at first slide
-            index--; // Decrements index
-            updateSlide(); // Updates slide position
+    function prevSlide() {
+        if (index > 0) { // Om inte första slide
+            index--; // Gå bak
+            updateSlide(); // Uppdatera position
         }
-        }
-    </script>
+    }
+</script>
 
 </body>
 </html>

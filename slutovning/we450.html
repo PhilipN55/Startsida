@@ -9,6 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <button class="specNow" onclick="goToSpec('Husaberg WE 450', 80000)">Spec Now</button>
+    <script>
+        function goToSpec(name, price) {
+            localStorage.setItem("bikeName", name);
+            localStorage.setItem("basePrice", price);
+            window.location.href = "spec.html";}
+    </script>
     <div class="header">
         <div class="Husaberg">
             <a href="huvudsida.html" class="Husaberg-text">HUSABERG</a>
@@ -20,7 +27,7 @@
             <p style="font-size: 18px;">starts at 80.000</p>
         </div>
         <div class="bild1">
-            <img src="image.png" width="400" height="300" alt="">
+            <img src="we450.png" width="400" height="300" alt="">
         </div>
     </div>
 
@@ -71,15 +78,15 @@
         <div class="info3-cards">
             <div class="info3-card">
                 <div class="info3-card-left"><p>The Chain</p><br><p>Designed for strength, durability, and smooth performance. This high-quality chain ensures efficient power transfer and long-lasting reliability for every ride.</p></div>
-                <div class="info3-card-right"><img src="chain.png" alt=""></div>
+                <div class="info3-card-right"><img src="kedja.png" alt=""></div>
             </div>
             <div class="info3-card">
                 <div class="info3-card-left"><p>The Handlebar</p><br><p>Designed for control, durability, and rider comfort. This high-quality handlebar provides a stable grip and responsive handling, ensuring better control and confidence on every ride.</p></div>
-                <div class="info3-card-right"><img src="Handlebar.png" alt=""></div>
+                <div class="info3-card-right"><img src="Handlebar copy.png" alt=""></div>
             </div>
             <div class="info3-card">
                 <div class="info3-card-left"><p>The Suspension</p><br><p>Engineered for strength, stability, and smooth performance. This advanced suspension absorbs impact and rough terrain with ease, delivering improved control and a more comfortable ride.</p></div>
-                <div class="info3-card-right"><img src="Suspension.png" alt=""></div>
+                <div class="info3-card-right"><img src="sus.png" alt=""></div>
             </div>
         </div>
         <div class="buttons">

@@ -80,19 +80,17 @@ const totalPrice = document.getElementById("totalPrice");
 
 function updatePrice() {
         let total = basePrice;
-
+        // lägg till pris för varje checkbox till total
         document.querySelectorAll("input[type='checkbox']").forEach(box => {
             if (box.checked) {
                 total += parseInt(box.dataset.price);
             }
         });
-
         totalPrice.textContent = total;
     }
-
     updatePrice();
 
-    // listen for changes
+    // lägg till event listener för varje checkbox
     document.querySelectorAll("input[type='checkbox']").forEach(box => {
         box.addEventListener("change", updatePrice);
     });
@@ -104,14 +102,14 @@ function updatePrice() {
     const inputs = document.querySelectorAll(".input");
 
     sendBtn.addEventListener("click", () => {
-        // slide out
+
         rightPanel.classList.add("slide-out");
 
-        // reset after animation
+        // reset 
         setTimeout(() => {
             inputs.forEach(input => input.value = "");
             rightPanel.classList.remove("slide-out");
-        }, 1000); // match CSS transition time
+        }, 1000); //timer innan reset
     });
 </script>
 
