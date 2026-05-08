@@ -151,3 +151,33 @@ a{text-decoration: none; color: white;}
 .right.slide-out {
     transform: translateX(120%);
 }
+@media (max-width: 900px) {
+    .sides {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left {
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .specs {
+        margin-left: 0;
+    }
+
+    .right {
+        position: static; 
+        width: 90vw;
+        height: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 30px;
+    }
+}

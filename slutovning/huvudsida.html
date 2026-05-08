@@ -16,16 +16,25 @@
         <div class="dropdown">
             <div class="menu-text"><p>All bikes</p></div>
             <div class="dropdown-zone">
-                <a class="dropdown-content" href="be125.html">BE125</a>
+                <a class="dropdown-content" href="be125.h   tml">BE125</a>
                 <a class="dropdown-content" id="last_dropdown" href="we450.html">WE450</a>
             </div>
         </div>
     </div>
     <div class="featuredBike">
         <div class="txt"><p>Featured bike</p></div>
-        <img src="image.png" width="500" height="350" alt="">
+        <img class="img1" src="image.png" width="500" height="350" alt="">
+        <img class="img2" src="Front.png" width="250" height="375" alt="">
         <div class="shadow"><a class="readMore" href="be125.html">Read more</a></div>
     </div>
     
+    <script>
+        function toggleMenu() {
+            const dropdown = document.querySelector(".dropdown");
+            dropdown.classList.toggle("show");
+        }
+    </script>
+
+
 </body>
 </html>
