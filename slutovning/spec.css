@@ -80,7 +80,7 @@ a{text-decoration: none; color: white;}
 .specs:active {
     transform: scale(0.97);
 }
-.specs p {
+.specs label {
     margin: 0;
     font-size: 14px;
     letter-spacing: 0.3px;
@@ -151,6 +151,11 @@ a{text-decoration: none; color: white;}
 .right.slide-out {
     transform: translateX(120%);
 }
+.Label{
+    display: block;
+    margin-bottom: 10px;
+}
+
 @media (max-width: 900px) {
     .sides {
         display: flex;
